@@ -73,7 +73,7 @@ if ! getent group logstash >/dev/null; then
         groupadd -r logstash
 fi
 
-# create ogstash user
+# create logstash user
 if ! getent passwd logstash >/dev/null; then
         useradd -r -g logstash -d %{base_install_dir} \
             -s /sbin/nologin -c "Logstash" logstash
